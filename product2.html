@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Change</title>
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="home.html" class="logo"> LOGO </a>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="products.html">products</a></li>
+            <li><a href="#">pages +</a>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blogs.html">blogs</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="beauty_salons.html">Beauty Salons</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">about us</a></li>
+            <li><a href="#">account +</a>
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="user.html" class="fas fa-user"></a>
+
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+
+<section class="produs">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = "images/mm12.jpg" alt = "watch">
+                    </div>
+                    <div class = "hover-container">
+                        <div><img src = "images/mm12.jpg"></div>
+                        <div><img src = "images/pp5.jpg"></div>
+                        <div><img src = "images/pp6.jpg"></div>
+                        <div><img src = "images/pp7.jpg"></div>
+                        <div><img src = "images/pp8.jpg"></div>
+                    </div>
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">Chanel
+                        Les 4 Ombres</span>
+                    <span class = "product-price">$ 54.25</span>
+                    <div class = "product-rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>(350 ratings)</span>
+                    </div>
+                    <p class = "product-description">Nu vă bateți capul cu diverse combinații coloristice. Fardul de pleoape intens Chanel Les 4 Ombres prezintă un cuartet de nuanțe perfect asortate, cu textură fină și culori intense. În plus, fiecare are un alt efect – mat, satinat, irizat sau metalic. Se pot folosi separat, pentru un look discret de zi sau împreună, pentru un fermecător machiaj fumuriu de seară.</p>
+                        <P class = "product-description">Două nuanțe medii creează pe pleoapă un contrast discret, cea mai întunecată nuanță intensifică machiajul și îi conferă profunzime, iar cea mai deschisă nuanță iluminează și deschide optic ochiul. Ambalajul practic, cu oglindă și aplicator pentru omogenizare perfectă sau pentru conturare, transformă aceste farduri într-un ajutor indispensabil pentru un machiaj perfect al ochilor, pentru orice ocazie.</P>
+                    <p class = "product-description"> Caracteristici:
+
+                        farduri de ochi pentru crearea machiajului natural sau intens
+                        nuanțe perfect asortate, pentru un rezultat perfect
+                        intens pigmentate
+                        rezistență de lungă durată
+                        textură foarte fină, pentru o combinare ușoară pe pleoapă
+                        inclusiv aplicator și oglindă mare
+                        potrivite și pentru cele care poartă lentile de contact</p>
+                        <div class = "btn-groups">
+                        <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                        <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        const allHoverImages = document.querySelectorAll('.hover-container div img');
+const imgContainer = document.querySelector('.img-container');
+
+window.addEventListener('DOMContentLoaded', () => {
+    allHoverImages[0].parentElement.classList.add('active');
+});
+
+allHoverImages.forEach((image) => {
+    image.addEventListener('mouseover', () =>{
+        imgContainer.querySelector('img').src = image.src;
+        resetActiveImg();
+        image.parentElement.classList.add('active');
+    });
+});
+
+function resetActiveImg(){
+    allHoverImages.forEach((img) => {
+        img.parentElement.classList.remove('active');
+    });
+}
+
+
+
+    </script>
+</body>
+</html>

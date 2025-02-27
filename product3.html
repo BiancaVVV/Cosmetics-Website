@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Change</title>
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="home.html" class="logo"> LOGO </a>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="products.html">products</a></li>
+            <li><a href="#">pages +</a>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blogs.html">blogs</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="beauty_salons.html">Beauty Salons</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">about us</a></li>
+            <li><a href="#">account +</a>
+                <ul>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="register.html">register</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="user.html" class="fas fa-user"></a>
+
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+
+<section class="produs">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = "images/mm13.jpg" alt = "watch">
+                    </div>
+                    <div class = "hover-container">
+                        <div><img src = "images/mm13.jpg"></div>
+                        <div><img src = "images/pp9.jpg"></div>
+                        <div><img src = "images/pp10.jpg"></div>
+                        <div><img src = "images/pp11.jpg"></div>
+                        <div><img src = "images/pp12.jpg"></div>
+                    </div>
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">Chanel
+                        Les Beiges Eyeshadow Palette</span>
+                    <span class = "product-price">$ 89</span>
+                    <div class = "product-rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>(350 ratings)</span>
+                    </div>
+                    <p class = "product-description">Scoateți în evidență frumusețea ochilor dvs., cu un machiaj natural. Paleta de farduri de ochi Chanel Les Beiges conține cinci nuanțe de fard, care se completează perfect și cu care veți reuși să creeați un look delicat și echilibrat, în fiecare zi. Fardurile cu textură catifelată se pot folosi pentru a crea un fel de umbră pe pleoape ori o linie de-a lungul genelor sau pentru a accentua sprâncenele. De asemenea, ambalajul său faimos, care conține și o oglindă mare și două aplicatoare, este perfect pentru călătorii sau poșetă. Fie că iubiți look-urile naturale sau pe cele mai îndrăznețe, cu această paletă veți arăta mereu perfect.
+ 
+                        <P class = "product-description">Caracteristici:
+
+                            o paletă de farduri pentru un machiaj proaspăt și natural
+                            toate nuanțele se completează
+                            se pot folosi și pe post de eyeliner sau pentru a accentua sprâncenele
+                            textură de pudră delicată, cu un finisaj strălucitor
+                            într-un ambalaj practic, cu oglindă și două aplicatoare</P>
+                   
+                        <p  class = "product-description">
+                        Cu ajutorul aplicatorului mai mare, aplicați fardul dorit pe pleoapa mobilă. Folosind aplicatorul mai mic, aplicați o nuanță mai închisă în pliul ochiului sau desenați o linie de-a lungul genelor. Estompați fardurile, în așa fel încât să nu se vadă linia de tranziție dintre acestea.    
+                    </p>
+                        <div class = "btn-groups">
+                        <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                        <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        const allHoverImages = document.querySelectorAll('.hover-container div img');
+const imgContainer = document.querySelector('.img-container');
+
+window.addEventListener('DOMContentLoaded', () => {
+    allHoverImages[0].parentElement.classList.add('active');
+});
+
+allHoverImages.forEach((image) => {
+    image.addEventListener('mouseover', () =>{
+        imgContainer.querySelector('img').src = image.src;
+        resetActiveImg();
+        image.parentElement.classList.add('active');
+    });
+});
+
+function resetActiveImg(){
+    allHoverImages.forEach((img) => {
+        img.parentElement.classList.remove('active');
+    });
+}
+
+
+
+    </script>
+</body>
+</html>
